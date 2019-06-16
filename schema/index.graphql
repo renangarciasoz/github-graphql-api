@@ -1,0 +1,4 @@
+#import Usuario, Repo, Commit from 'user.graphql'
+#import Query, from 'query.graphql'
+
+scalar Date

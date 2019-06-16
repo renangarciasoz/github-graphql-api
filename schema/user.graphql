@@ -1,0 +1,32 @@
+type User {
+  id: String
+  login: String
+  avatar_url: String
+  repos_url: String
+  repos: [Repo!]!
+}
+
+type Repo {
+  id: String
+  name: String
+  forks_count: Int
+  language: String
+  full_name: String
+  created_at: String
+  updated_at: String
+  watchers_count: Int
+  description: String
+  stargazers_count: Int
+  open_issues_count: Int
+  commits: [Commit!]!
+}
+
+type Commit {
+  sha: String
+  html_url: String
+  commit_msg: String
+  author_name: String
+  author_email: String
+  author_created_at: String
+  author_avatar_url: String
+}

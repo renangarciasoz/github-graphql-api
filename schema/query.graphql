@@ -1,0 +1,10 @@
+type Query {
+  users: [User!]!
+  user(login: String!): User!
+
+  repos(login: String!): [Repo!]!
+  repo(id: String!): Repo!
+
+  commits(login: String!, repoName: String!): [Commit!]!
+  commit(sha: String!): Commit!
+}

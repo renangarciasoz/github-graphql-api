@@ -1,0 +1,22 @@
+{
+  "name": "github-graphql-api",
+  "description": "GraphQL API for search users, repositories and commits at gihub 🚀.",
+  "version": "0.0.1",
+  "dependencies": {
+    "apollo-datasource-rest": "0.1.5",
+    "apollo-server": "2.1.0",
+    "graphql": "14.0.2",
+    "graphql-import": "^0.7.1"
+  },
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --ext js,graphql index.js localhost 4000"
+  },
+  "keywords": [],
+  "devDependencies": {
+    "@types/graphql": "14.0.1",
+    "nodemon": "1.18.4"
+  },
+  "author": "Renan Garcia <renangarciasoz@hotmail.com>"
+}
