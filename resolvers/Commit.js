@@ -3,10 +3,10 @@ module.exports = {
     author_name: (commit) => commit.commit.author.name,
     author_email: (commit) => commit.commit.author.email,
     author_avatar_url: (commit) => {
-        if (commit.autor && commit.author.avatar_url){
+        if (commit.author && commit.author.avatar_url){
             return commit.author.avatar_url
         }
-        else if (commit.owner && commit.owner.avatar_url) {
+        if (commit.owner && commit.owner.avatar_url) {
             return commit.owner.avatar_url
         }
 
