@@ -22,7 +22,7 @@ Install the required dependencies:
 
 Start a local development server with the following command:
 
-`$ npm run start`
+`$ npm run develop`
 
 This will:
 

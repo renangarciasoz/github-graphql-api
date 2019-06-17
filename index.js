@@ -12,6 +12,7 @@ const server = new ApolloServer({
 
 if (process.env.PORT) {
   server.listen(process.env.PORT)
+  console.log(process.env.PORT)
 } else {
   server.listen().then(({ url }) => {
     console.log(`🚀 Server ready at ${url}`);
