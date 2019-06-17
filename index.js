@@ -10,6 +10,11 @@ const server = new ApolloServer({
   dataSources: () => ({ githubApi: new GithubDataSource() })
 });
 
-server.listen().then(({ url }) => {
-  console.log(`🚀 Server ready at ${url}`);
-});
+if (process.env.PORT) {
+  server.listen(process.env.PORT)
+} else {
+  server.listen().then(({ url }) => {
+    console.log(`🚀 Server ready at ${url}`);
+  });
+}
+

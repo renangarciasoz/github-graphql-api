@@ -11,7 +11,8 @@
   "license": "MIT",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon --ext js,graphql index.js localhost 4000"
+    "start": "node index.js",
+    "develop": "nodemon --ext js,graphql index.js localhost 4000"
   },
   "keywords": [],
   "devDependencies": {
