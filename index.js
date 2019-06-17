@@ -20,7 +20,6 @@ const server = new ApolloServer({
   dataSources: () => ({ githubApi: new GithubDataSource() })
 });
 
-// Initiate the server
-server.listen(process.env.PORT || 3000, () => {
-  console.log(`Server started on port: ${process.env.PORT || 3000}`);
+server.listen({ port: process.env.PORT || 4000 }).then(({ url }) => {
+  console.log(`🚀 Server ready at ${url}`);
 });
