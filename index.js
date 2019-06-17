@@ -4,18 +4,23 @@ const resolvers = require("./resolvers");
 const GithubDataSource = require("./api/GithubDataSource");
 
 const schemaPath = "./schema/index.graphql";
+
 const server = new ApolloServer({
+  context: ({ req }) => {
+    console.log(req.headers);
+    return {
+      headers: req.headers,
+      driver
+    };
+  },
   typeDefs: importSchema(schemaPath),
   resolvers,
+  introspection: true,
+  playground: true,
   dataSources: () => ({ githubApi: new GithubDataSource() })
 });
 
-if (process.env.PORT) {
-  server.listen(process.env.PORT)
-  console.log(process.env.PORT)
-} else {
-  server.listen().then(({ url }) => {
-    console.log(`🚀 Server ready at ${url}`);
-  });
-}
-
+// Initiate the server
+server.listen(process.env.PORT || 3000, () => {
+  console.log(`Server started on port: ${process.env.PORT || 3000}`);
+});
