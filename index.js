@@ -22,3 +22,8 @@ const server = new ApolloServer({
 server.listen({ port: process.env.PORT || 4000 }).then(({ url }) => {
   console.log(`🚀 Server ready at ${url}`);
 });
+
+var http = require("http");
+setInterval(function() {
+    http.get("http://github-graphql-api.herokuapp.com");
+}, 300000); // every 5 minutes (300000)
