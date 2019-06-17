@@ -1,7 +1,6 @@
 module.exports = {
     commit_msg: (commit) => commit.commit.message,
     author_name: (commit) => commit.commit.author.name,
-    author_email: (commit) => commit.commit.author.email,
     author_avatar_url: (commit) => {
         if (commit.author && commit.author.avatar_url){
             return commit.author.avatar_url

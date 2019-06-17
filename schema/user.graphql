@@ -26,7 +26,6 @@ type Commit {
   html_url: String
   commit_msg: String
   author_name: String
-  author_email: String
   author_created_at: String
   author_avatar_url: String
 }
