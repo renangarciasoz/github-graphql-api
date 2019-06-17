@@ -9,8 +9,7 @@ const server = new ApolloServer({
   context: ({ req }) => {
     console.log(req.headers);
     return {
-      headers: req.headers,
-      driver
+      headers: req.headers
     };
   },
   typeDefs: importSchema(schemaPath),
