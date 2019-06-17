@@ -16,7 +16,7 @@ class GithubDataSource extends RESTDataSource {
       return res
     });
 
-    return users ? (users.length >= 10 ? users.slice(0, 10) : users) : [];
+    return users ? (users.length >= 4 ? users.slice(0, 4) : users) : [];
   }
 
   async getUser(login) {
@@ -34,7 +34,7 @@ class GithubDataSource extends RESTDataSource {
       return res
     });
 
-    return repos ? (repos.length >= 10 ? repos.slice(0, 10) : repos) : [];
+    return repos ? (repos.length >= 4 ? repos.slice(0, 4) : repos) : [];
   }
 
   async getCommits(login, repoName) {
@@ -43,7 +43,7 @@ class GithubDataSource extends RESTDataSource {
       return res
     });
 
-    return commits ? (commits.length >= 10 ? commits.slice(0, 10) : commits) : [];
+    return commits ? (commits.length >= 4 ? commits.slice(0, 4) : commits) : [];
   }
 }
 
