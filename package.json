@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "dependencies": {
     "apollo-datasource-rest": "0.1.5",
-    "apollo-server": "2.1.0",
+    "apollo-server": "2.25.3",
     "graphql": "14.0.2",
     "graphql-import": "^0.7.1"
   },
